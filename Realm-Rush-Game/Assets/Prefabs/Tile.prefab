@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 530796946597657305}
   - component: {fileID: 3925026866497560141}
   m_Layer: 0
-  m_Name: GrassMesh
+  m_Name: Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
