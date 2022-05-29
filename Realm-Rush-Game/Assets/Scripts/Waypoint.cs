@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class Waypoint : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+[SerializeField] bool isPlaceable;
+[SerializeField] GameObject ballistaPrefab;
+    void OnMouseDown() {
+        if(isPlaceable)
+        {
+            Instantiate(ballistaPrefab, transform.position, Quaternion.identity);
+            Debug.Log("Ballista instantiated at" + transform.name);
+            isPlaceable = false;
+        }
     }
 }
