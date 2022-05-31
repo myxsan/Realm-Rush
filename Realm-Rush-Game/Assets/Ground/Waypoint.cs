@@ -5,16 +5,15 @@ using UnityEngine;
 public class Waypoint : MonoBehaviour
 {
     [SerializeField] bool isPlaceable;
-    [SerializeField] GameObject ballistaPrefab;
+    [SerializeField] Tower towerPrefab;
 
     public bool IsPlaceable{ get {return isPlaceable; } }
 
     void OnMouseDown() {
         if(isPlaceable)
         {
-            Instantiate(ballistaPrefab, transform.position, Quaternion.identity);
-            Debug.Log("Ballista instantiated at" + transform.name);
-            isPlaceable = false;
+            bool isPlaced = towerPrefab.CreateTower(towerPrefab, transform.position);
+            isPlaceable = !isPlaced;
         }
     }
 }
