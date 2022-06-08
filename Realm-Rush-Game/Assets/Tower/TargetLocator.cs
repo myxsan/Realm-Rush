@@ -44,7 +44,7 @@ public class TargetLocator : MonoBehaviour
         if(targetDistance <= towerRange)
         {
             Attack(true);
-            weapon.transform.LookAt(target);
+            weapon.transform.LookAt(target.transform.GetChild(0));
         }
         else
         {
